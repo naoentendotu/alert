@@ -1,0 +1,16 @@
+﻿[
+	{
+		"Nome": "ASSEMBLY",
+		"Tipo": "Trabalho",
+		"Descricao": "realizar exercicios em assembly",
+		"Materia": "ARQ 2",
+		"DataEntrega": "2025-05-14T00:00:00"
+	},
+	{
+		"Nome": "Estatistica",
+		"Tipo": "Prova",
+		"Descricao": "conteudo estatistico",
+		"Materia": "Probabilidade e Estatistica",
+		"DataEntrega": "2025-05-14T00:00:00"
+	}
+]
