@@ -1,4 +1,4 @@
-## 📌 ALERT! — Windows Forms com C#
+## 📌 ALERT! 
 
 ### 🧠 Sobre o Projeto
 
