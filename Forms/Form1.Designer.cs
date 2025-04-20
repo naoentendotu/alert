@@ -28,40 +28,60 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAdicionar = new System.Windows.Forms.Button();
-            this.btnVerAlertas = new System.Windows.Forms.Button();
+            this.btnAdicionar = new MetroFramework.Controls.MetroButton();
+            this.btnVerTarefas = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // btnAdicionar
             // 
-            this.btnAdicionar.Location = new System.Drawing.Point(235, 93);
+            this.btnAdicionar.BackColor = System.Drawing.Color.Purple;
+            this.btnAdicionar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdicionar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnAdicionar.Location = new System.Drawing.Point(216, 119);
             this.btnAdicionar.Name = "btnAdicionar";
-            this.btnAdicionar.Size = new System.Drawing.Size(267, 135);
+            this.btnAdicionar.Size = new System.Drawing.Size(275, 120);
+            this.btnAdicionar.Style = MetroFramework.MetroColorStyle.Silver;
             this.btnAdicionar.TabIndex = 0;
             this.btnAdicionar.Text = "ADICIONAR TAREFA";
-            this.btnAdicionar.UseVisualStyleBackColor = true;
+            this.btnAdicionar.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.btnAdicionar.UseCustomBackColor = true;
+            this.btnAdicionar.UseCustomForeColor = true;
+            this.btnAdicionar.UseSelectable = true;
+            this.btnAdicionar.UseStyleColors = true;
             this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
-            // btnVerAlertas
+            // btnVerTarefas
             // 
-            this.btnVerAlertas.Location = new System.Drawing.Point(235, 290);
-            this.btnVerAlertas.Name = "btnVerAlertas";
-            this.btnVerAlertas.Size = new System.Drawing.Size(267, 135);
-            this.btnVerAlertas.TabIndex = 1;
-            this.btnVerAlertas.Text = "button2";
-            this.btnVerAlertas.UseVisualStyleBackColor = true;
-            this.btnVerAlertas.Click += new System.EventHandler(this.btnVerAlertas_Click);
+            this.btnVerTarefas.BackColor = System.Drawing.Color.Purple;
+            this.btnVerTarefas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVerTarefas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnVerTarefas.Location = new System.Drawing.Point(216, 288);
+            this.btnVerTarefas.Name = "btnVerTarefas";
+            this.btnVerTarefas.Size = new System.Drawing.Size(275, 120);
+            this.btnVerTarefas.Style = MetroFramework.MetroColorStyle.Silver;
+            this.btnVerTarefas.TabIndex = 1;
+            this.btnVerTarefas.Text = "VER TAREFAS";
+            this.btnVerTarefas.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.btnVerTarefas.UseCustomBackColor = true;
+            this.btnVerTarefas.UseCustomForeColor = true;
+            this.btnVerTarefas.UseSelectable = true;
+            this.btnVerTarefas.UseStyleColors = true;
+            this.btnVerTarefas.Click += new System.EventHandler(this.btnVerTarefas_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(722, 525);
-            this.Controls.Add(this.btnVerAlertas);
+            this.Controls.Add(this.btnVerTarefas);
             this.Controls.Add(this.btnAdicionar);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Style = MetroFramework.MetroColorStyle.Purple;
+            this.Text = "Gerenciamento de Tarefas";
+            this.TransparencyKey = System.Drawing.Color.DarkMagenta;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
@@ -69,8 +89,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnAdicionar;
-        private System.Windows.Forms.Button btnVerAlertas;
+        private MetroFramework.Controls.MetroButton btnAdicionar;
+        private MetroFramework.Controls.MetroButton btnVerTarefas;
     }
 }
 

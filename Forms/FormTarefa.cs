@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 
 namespace Alert
 {
-    public partial class FormTarefa: Form
+    public partial class FormTarefa: MetroFramework.Forms.MetroForm
     {
         private List<Tarefa> tarefas;
         private string caminhoJson = Path.Combine(Application.StartupPath, "tarefas.json");
@@ -15,6 +15,8 @@ namespace Alert
         {
             InitializeComponent();
             CarregarTarefas();
+            this.Style = MetroFramework.MetroColorStyle.Purple;
+            this.Theme = MetroFramework.MetroThemeStyle.Light;
         }
 
         private void CarregarTarefas()
@@ -66,5 +68,10 @@ namespace Alert
             MessageBox.Show("Tarefa salva com sucesso!");
             this.Close();
         }
-    }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        }
 }

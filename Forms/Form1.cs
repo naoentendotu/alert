@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using MetroFramework.Components;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -7,11 +8,20 @@ using System.Windows.Forms;
 
 namespace Alert
 {
-    public partial class Form1 : Form
+    public partial class Form1 : MetroFramework.Forms.MetroForm
     {
+        private MetroFramework.Components.MetroStyleManager styleManager;
+
         public Form1()
         {
             InitializeComponent();
+            styleManager = new MetroFramework.Components.MetroStyleManager();
+            styleManager.Owner = this; // Define o dono como o formulário atual
+            styleManager.Style = MetroFramework.MetroColorStyle.Purple; // Cor
+            styleManager.Theme = MetroFramework.MetroThemeStyle.Light; // Tema
+
+            this.StyleManager = styleManager;
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -34,7 +44,10 @@ namespace Alert
                         sb.AppendLine($"{tarefa.Tipo} - {tarefa.Descricao} - Faltam {diasFaltando} dias");
                     }
 
-                    MessageBox.Show(sb.ToString(), "Tarefas Pendentes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Exibe a mensagem com as tarefas pendentes
+                    // Posteriormente fazer um FormMenssagemBox
+                    MetroFramework.MetroMessageBox.Show(this, sb.ToString(), "Tarefas Pendentes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 }
                 else
                 {
@@ -55,7 +68,7 @@ namespace Alert
             new FormTarefa().ShowDialog();
         }
 
-        private void btnVerAlertas_Click(object sender, EventArgs e)
+        private void btnVerTarefas_Click(object sender, EventArgs e)
         {
             new FormAlerta().ShowDialog();
         }
