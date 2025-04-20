@@ -6,7 +6,7 @@ A ideia surgiu depois que eu perdi o prazo de entrega de um exercício, a aplica
 
 Consiste em uma aplicação desktop desenvolvida em **.NET C# (Windows Forms)** que exibe um alerta com suas tarefas pendentes toda vez que o notebook é ligado.
 
---
+---
 
 ### 🛠️ Funcionalidades
 
@@ -21,7 +21,7 @@ Consiste em uma aplicação desktop desenvolvida em **.NET C# (Windows Forms)** 
 - 💾 Salvar dados localmente em um arquivo `tarefas.json`
 - 🖱️ Interface gráfica moderna com **MetroFramework**
 
---
+---
 
 ### 📦 Tecnologias Utilizadas
 
@@ -30,7 +30,7 @@ Consiste em uma aplicação desktop desenvolvida em **.NET C# (Windows Forms)** 
 - 🧩 Newtonsoft.Json (via NuGet) para manipulação de arquivos JSON
 - 🧩 MetroFramework (via NuGet) para personalização de telas
 
---
+---
 
 ### 🚀 Como Executar
 
@@ -49,7 +49,7 @@ Consiste em uma aplicação desktop desenvolvida em **.NET C# (Windows Forms)** 
 4. Compile e execute o projeto (`F5`)
 5. A tela inicial irá exibir as tarefas salvas (se existirem), ou um aviso de que ainda não há tarefas (e criar o arquivo onde serão adicionadas as novas tarefas).
 
---
+---
 
 ### 🔁 Execução Automática ao Ligar o PC (opcional)
 
@@ -62,7 +62,7 @@ Para que o alerta seja exibido automaticamente ao iniciar o sistema:
 
 Pronto! Toda vez que o sistema iniciar, sua aplicação será executada.
 
---
+---
 
 ### ✨ Funcionalidades Futuras
 
