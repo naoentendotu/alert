@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using MetroFramework.Controls;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,7 +13,7 @@ using System.Windows.Forms;
 
 namespace Alert
 {
-    public partial class FormAlerta : Form
+    public partial class FormAlerta : MetroFramework.Forms.MetroForm
     {
         public FormAlerta()
         {
@@ -30,10 +31,37 @@ namespace Alert
 
             foreach (var tarefa in tarefas)
             {
+                // Fazendo com o ListBox
+                //int dias = (tarefa.DataEntrega - hoje).Days;
+                //string texto = $"{tarefa.Nome} | {tarefa.Tipo} | {tarefa.Descricao} | {tarefa.Materia} | Faltam {dias} dias para entregar!";
+                //listBox1.Items.Add(texto);
+
+            //=================================================================================================================================
+
+                // Fazendo com o MetroGrid
+
+                // Adicionando colunas ao DataGridView
+                gridTarefas.Columns.Add("Nome", "Nome");
+                gridTarefas.Columns.Add("Tipo", "Tipo");
+                gridTarefas.Columns.Add("Descricao", "Descrição");
+                gridTarefas.Columns.Add("Materia", "Matéria");
+                gridTarefas.Columns.Add("DataEntrega", "Data de Entrega");
+
+                // Adicionando os dados ao DataGridView
                 int dias = (tarefa.DataEntrega - hoje).Days;
-                string texto = $"{tarefa.Nome} | {tarefa.Tipo} | {tarefa.Descricao} | {tarefa.Materia} | Faltam {dias} dias para entregar!";
-                listBox1.Items.Add(texto);
+                string[] linha = new string[]
+                {
+                    tarefa.Nome,
+                    tarefa.Tipo,
+                    tarefa.Descricao,
+                    tarefa.Materia,
+                    tarefa.DataEntrega.ToString("dd/MM/yyyy")
+                };
+
+                gridTarefas.Rows.Add(linha);
+
             }
+
         }
     }
 }
