@@ -49,34 +49,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAlerta.cs">
+    <Compile Include="Forms\FormAlerta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAlerta.Designer.cs">
+    <Compile Include="Forms\FormAlerta.Designer.cs">
       <DependentUpon>FormAlerta.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormTarefa.cs">
+    <Compile Include="Forms\FormTarefa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormTarefa.Designer.cs">
+    <Compile Include="Forms\FormTarefa.Designer.cs">
       <DependentUpon>FormTarefa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Entidades\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tarefa.cs" />
-    <EmbeddedResource Include="Form1.resx">
+    <Compile Include="Entidades\Tarefa.cs" />
+    <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAlerta.resx">
+    <EmbeddedResource Include="Forms\FormAlerta.resx">
       <DependentUpon>FormAlerta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormTarefa.resx">
+    <EmbeddedResource Include="Forms\FormTarefa.resx">
       <DependentUpon>FormTarefa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -101,11 +101,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="tarefas.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
